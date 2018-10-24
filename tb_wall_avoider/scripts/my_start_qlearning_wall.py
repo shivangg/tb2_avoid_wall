@@ -9,15 +9,15 @@ from gym import wrappers
 import rospy
 import rospkg
 # import our training environment
-from openai_ros.task_envs.turtlebot2 import turtlebot2_maze
+import my_turtlebot2_wall
 
 
 if __name__ == '__main__':
 
-    rospy.init_node('turtlebot2_maze_qlearn', anonymous=True, log_level=rospy.WARN)
+    rospy.init_node('example_turtlebot2_maze_qlearn', anonymous=True, log_level=rospy.WARN)
 
     # Create the Gym environment
-    env = gym.make('TurtleBot2Maze-v0')
+    env = gym.make('MyTurtleBot2Wall-v0')
     rospy.loginfo("Gym environment done")
 
     # Set the logging system
@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
     # Starts the main training loop: the one about the episodes to do
     for x in range(nepisodes):
-        rospy.logdebug("############### START EPISODE=>" + str(x))
+        rospy.logdebug("############### WALL START EPISODE=>" + str(x))
 
         cumulated_reward = 0
         done = False
