@@ -1,4 +1,4 @@
-### Steps to Reproduce on the Robot Development Studios(RDS)
+### Steps to Reproduce on the ROS Development Studio (RDS)
 
 #### 1. Start the simulation of the Turtlebot2 (TB2) with a wall in front of it.
 
